@@ -39,6 +39,6 @@ public class Pessoa {
     }
 
     public void falar() {
-        System.out.println("Olá, meu nome é " + this.nome + " e eu tenho " + this.idade + " anos");
+        System.out.println("Olá, meu nome é " + this.nome + " e eu tenho " + this.idade + " anos " + this.altura + " altura ");
     }
 }
