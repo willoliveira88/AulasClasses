@@ -1,14 +1,10 @@
-  import Models.ContaBancaria;
-import Models.Pessoa;
-
+import Models.Livros;
 public class Main {
-    public static void main(String[] args) {
-            ContaBancaria conta = new ContaBancaria("358987-8", "Willian");
-            conta.imprimirExtrato();
-            conta.depositar(1600);
-            conta.sacar(450);
-            conta.imprimirExtrato();
-
-
-        }
-    }
+      public static void main(String[] args) {
+          Livros livros = new Livros ("livros" ," Love" , 2024);
+          livros.imprimirInformacoes();
+          livros.emprestarLivro();
+          livros.emprestarLivro();
+          livros.devolverLivro();
+      }
+  }
