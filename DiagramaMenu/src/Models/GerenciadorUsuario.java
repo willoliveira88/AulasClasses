@@ -9,38 +9,50 @@ public class GerenciadorUsuario {
         this.usuarios = new ArrayList<>();
     }
 
-    // Método para adicionar um novo usuário à lista
+    // Adicionar um novo usuário à Lista
     public void adicionarUsuario(Usuario usuario) {
-        usuarios.add(usuario);
+
+        // Verifica se o ID já existe na Lista
+
+        if (obterUsuarioPorId(usuario.getId()) == null) {
+            usuarios.add(usuario);
+            System.out.println("Usuário adicionado com sucesso!");
+        } else {
+            System.out.println("Erro: ID de usuário já existe.");
+        }
     }
 
-    // Método para obter todos os usuários da lista
+    // Verificar todos os usuários da Lista
     public List<Usuario> obterTodosUsuarios() {
         return usuarios;
     }
 
-    // Método para obter um usuário pelo seu ID
+    //  Obtendo um usuário pelo seu ID
     public Usuario obterUsuarioPorId(String id) {
         for (Usuario usuario : usuarios) {
             if (usuario.getId().equals(id)) {
                 return usuario;
             }
         }
-        return null; // Retorna null se o usuário não for encontrado
+        return null; // Retorna nulo se o usuário não for encontrado
     }
 
-    // Método para atualizar os dados de um usuário pelo seu ID
+    //  Atualizar os dados de um usuário pelo ID
     public void atualizarUsuario(String id, String novoNome, String novoEmail) {
         for (Usuario usuario : usuarios) {
             if (usuario.getId().equals(id)) {
                 usuario.setNome(novoNome);
                 usuario.setEmail(novoEmail);
+                System.out.println("Usuário atualizado com sucesso!");
                 return; // Retorna após atualizar o usuário
             }
         }
-
+        System.out.println("Erro: Usuário não encontrado.");
     }
+
+    // Remover um usuário pelo ID
     public void removerUsuario(String id) {
         usuarios.removeIf(usuario -> usuario.getId().equals(id));
+        System.out.println("Usuário removido com sucesso!");
     }
 }
