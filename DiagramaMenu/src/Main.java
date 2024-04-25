@@ -11,13 +11,13 @@ public class Main {
         boolean executando = true;
 
         while (executando) {
-            System.out.println("\nSelecione uma opção:");
-            System.out.println("1. Adicionar usuário");
-            System.out.println("2. Obter todos os usuários");
-            System.out.println("3. Obter usuário por ID");
-            System.out.println("4. Atualizar usuário");
-            System.out.println("5. Remover usuário");
-            System.out.println("0. Sair");
+            System.out.println("\nSelecione uma opção:"    );
+            System.out.println("| 1. Adicionar usuário       |" );
+            System.out.println("| 2. Obter todos os usuários | ");
+            System.out.println("| 3. Obter usuário por ID    |" );
+            System.out.println("| 4. Atualizar usuário       |" );
+            System.out.println("| 5. Remover usuário         |" );
+            System.out.println("| 0. Sair                    |" );
 
             int opcao = scanner.nextInt();
             scanner.nextLine();
